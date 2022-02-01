@@ -35,7 +35,7 @@ export class HelloWorldModel extends Observable {
 
     async getTranslations(){
         try {
-            let url = "https://raw.githubusercontent.com/damian-pm/ang/main/translations.json?t=123"
+            let url = "https://raw.githubusercontent.com/dsamsoniuk/app-course-eng/main/translations.json?t=123"
             const res:Translations = await Http.getJSON(url)
             this.data = res;
           } catch (error) {
