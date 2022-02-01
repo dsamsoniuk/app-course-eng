@@ -1,5 +1,9 @@
 {
    "translations": [
+     {
+         "pl":"Próbowano wczytać klasę DecimalNumber z przestrzeni PrestaShop Decimal.",
+         "en":"Attempted to load class DecimalNumber from namespace PrestaShop Decimal."
+        },
         {
             "pl":"wielo-wymiarowa kula wysypuje się z wysoko-wymiarowej sześcian pomimo wykładniczo wielu ograniczeń",
             "en":"A high-dimensional sphere spilling out of a high-dimensional cube despite exponentially many constraints"
@@ -9,5 +13,11 @@
         },{
          "pl":"Zadzwoń do dwóch firm zajmujących się rekrutacją, z których jeden skontaktował się ze mną w zeszłym tygodniu przez pocztę inMail, a drugi odpowiadał na zgłoszenie przez LinkedIn. Naprawdę zaczynam doceniać Calendly. Eliminuje wiele ruchów tam iz powrotem podczas planowania.",
          "en":"Set up calls with two corporate recruiters, one who hit me up last week via inMail, one responding to me applying via LinkedIn. Really starting to appreciate Calendly. It eliminates a lot of back and forth in scheduling."
+        },{
+          "pl":"Coroczny dochód pary wynosił około 700 funtów",
+         "en":"The couple’s annual income was around £700 "
+        },{
+          "pl":"Wyświetla obraz z soczewki urządzenia na siatkówkę użytkownika, aby skorygować błąd refrakcji, który powoduje krótkowzroczność.",
+         "en":"It projects an image from the lens of the unit onto the wearer's retina to correct the refractive error that causes nearsightedness."
         }
 ]}
