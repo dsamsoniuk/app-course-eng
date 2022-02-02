@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="translations.json" ></script>
+        <script>
+
+   
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row m-2">
+                <div class="col-sm-12">
+                    <button class="btn btn-primary showText" data-lang="en">show eng text</button>
+                    <button class="btn btn-success showText"  data-lang="pl">show pol text</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row m-2">
+                <div class="col-sm-12 fs-4" id="text"></div>
+            </div>
+            <div class="row m-2">
+                <div class="col-sm-12">
+                    <button class="btn btn-primary" id="showTranslate">translate</button>
+                    <button class="btn btn-outline-secondary float-end" id="unsetSentence">unset</button>
+                </div>
+            </div>
+            <div class="row m-2 mt-3">
+                <div class="col-sm-12 fs-4 invisible" id="text-translate"></div>
+            </div>
+        </div>
+
+        <script>
+            var url = "https://raw.githubusercontent.com/dsamsoniuk/app-course-eng/main/translations.json"
+
+            window.sentence = []
+
+            $.ajaxSetup({ cache: false });
+
+            $.ajax({url:url, dataType:"json", cache: false}).done(function(res){
+                window.sentence = res['translations']
+                console.log("dane pobrane, ilosc:" + window.sentence.length)
+                $.ajaxSetup({ cache: false });
+
+            });
+
+              $('.showText').on('click', function(){
+                var count = window.sentence.length
+                var lang = $(this).attr('data-lang')
+                var langTranslate = lang == 'pl' ? 'en' : 'pl'
+                var index = Math.floor((Math.random() * count));
+                var randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+                $('#text').html(window.sentence[index][lang]).css('color', randomColor)
+                $('#text-translate').addClass('invisible')
+                $('#text-translate').html(window.sentence[index][langTranslate])
+                $('#unsetSentence').attr('data-index', index)
+            });
+
+            $('#showTranslate').on('click', function(){
+                $('#text-translate').removeClass('invisible')
+            });
+
+            $('#unsetSentence').on('click', function(){
+                var index = $(this).attr('data-index')
+                if (index) {
+                    window.sentence.splice(index, 1)
+                    $(this).attr('data-index', '')
+                }
+            });
+
+        </script>
+    </body>
+</html>

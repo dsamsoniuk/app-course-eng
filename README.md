@@ -17,5 +17,4 @@ https://docs.nativescript.org/#overview-of-nativescript-development
 ns run android
 ```
 
-
 ![alt text](screen-phone.png "Title")
