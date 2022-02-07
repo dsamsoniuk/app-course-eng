@@ -1,6 +1,9 @@
 {
    "translations": [
-      {
+       {
+         "pl":"Idz prosto wzdłuż tej ulicy aż do skrzyżowania, następnie skręć w lewo i idź 500m aż do białego budynku.",
+         "en":"Walk straight along this street to the intersection, then turn left and walk 500m until you reach the white building. "
+        },{
          "pl":"Mary Barra, dyrektor generalna GM, nazwała swoją pierwszą przejażdżkę bez kierowcy 'surrealistyczną' i 'punktem kulminacyjnym jej kariery' jako inżyniera. Czuję dokładnie to samo i nie mogę się doczekać, aż sam spróbujesz. Nie ma dla nas lepszego miejsca na start niż San Francisco, miejsce, w którym zachęca się do myślenia na wielką skalę, niezależnie od tego, jak oburzające mogą się wydawać Twoje pomysły.",
          "en":"Mary Barra, the CEO of GM, called her first driverless ride 'surreal' and 'a highlight of her career' as an engineer. I feel exactly the same way and can’t wait for you to try it for yourself. There’s no better place for us to start than in San Francisco, a place where thinking big is encouraged regardless of how outrageous your ideas may seem."
         },
